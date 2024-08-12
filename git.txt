@@ -1,0 +1,48 @@
+# installare git su windows
+https://gitforwindows.org/
+
+GIT LOCALE:
+# nella bash del terminale dentro ad un progetto
+# inizializiamo git
+git init
+
+# per mettere file nella staging area
+git status
+git add <file_name> => single file
+git add . => all files
+
+# rimuovere file dalla staging area
+git rm --cached -r .
+
+# aggiungere file nel commit
+git commit -m "Nome del commit e della version v0"
+
+# per vedere tutti i commit
+commit log
+
+# controllare le mmodifiche tra due commit
+git diff <nome_ultimo_file>
+
+# tornare all'ultima versione del commit
+git checkout <nome_file_che_vogliamo_ripristinare>
+
+
+GITHUB REMOTE:
+
+Creare una nuova public/private repository
+
+# crea la repo
+git remote add origin <url_repo>
+git push -u origin main
+
+# creare file contentete i file che git deve ignorare dal commit (come file api, apk, key ecc...)
+touch .gitignore
+
+# nel file gitignore basta inserire i nomi dei file da far ignorare a git
+# https://github.com/github/gitignore => contiene i template di gitignore per ogni linguaggio di programmazione
+
+# clonare uan repo di qualcuno
+git clone <url>
+
+# fare il merge
+git merge <nome_file>
